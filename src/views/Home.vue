@@ -13,7 +13,7 @@
 <form action="https://privacypolicy.ipfs-chat.software" method="get" target="_blank">
 <button class="hover:border-indigo-600 hover:text-indigo-600 p-2 col-end-3 col-start-1 10 border border-gray-700 border-dashed rounded-lg text-sm" >Know our privacy policy</button>
 </form>
-        <router-link tag="button" to="/metamask" class="border border-transparent hover:border-indigo-600 hover:bg-transparent p-2 10 bg-indigo-600 text-white rounded-lg">Start</router-link>
+        <router-link tag="button" to="/connect" class="border border-transparent hover:border-indigo-600 hover:bg-transparent p-2 10 bg-indigo-600 text-white rounded-lg">Start</router-link>
       </div>
     </div>
   </div>

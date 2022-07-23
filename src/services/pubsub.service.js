@@ -1,12 +1,12 @@
 import EventEmitter from 'events'
-import { generate } from 'shortid'
+import {getAccount} from '../views/meta.vue';
 
 export default class RtManager extends EventEmitter {
   constructor (pubSub, identifier = 'rtm_') {
     super();
     this._pubSub = pubSub;
     this._id = identifier;
-    this._stamp = generate();
+    this._stamp = getAccount();
     this._channels = [];
   }
 
@@ -81,7 +81,7 @@ class Channel {
   constructor (channelName, pubSub) {
     this.channelName = channelName;
     this.pubSub = pubSub;
-    this._id = generate();
+    this._id = getAccount();
     this._subscribers = [];
   }
 
@@ -131,7 +131,7 @@ class Channel {
 class Subscriber extends EventEmitter {
   constructor(pubSub, channelName) {
     super();
-    this._id = generate();
+    this._id = getAccount();
     this._pubSub = pubSub;
     this.channelName = channelName;
     this.available = true;

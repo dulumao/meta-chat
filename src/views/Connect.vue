@@ -24,7 +24,7 @@
           <loader/>
         </div>
         <div class="grid grid-cols-4">
-          <button @click="isGen = true; generate()" :class="[isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tl-lg col-span-2 px-10 py-2 border-dashed">Generate</button>
+          <button @click="isGen = true; getAccount()" :class="[isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tl-lg col-span-2 px-10 py-2 border-dashed">Generate</button>
           <button @click="isGen = false; clear()" :class="[!isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tr-lg col-span-2 px-10 py-2 border-dashed">Import</button>
         </div>
         <div v-show="isGen" class="border grid grid-cols-3 border-indigo-600 border-t-transparent border-dashed rounded-bl-lg rounded-br-lg">
@@ -124,7 +124,7 @@ export default {
       this.setIpfsNode(null)
       throw new Error("User not found");
     },
-    async generate() {
+    async getAccount() {
       this.userForm = await createUser();
     },
     async copy() {
@@ -166,7 +166,7 @@ export default {
       }
       return this.$router.push("/app");
     }
-    await this.generate();
+    await this.getAccount();
     this.isLoading = false;
   },
   components: {

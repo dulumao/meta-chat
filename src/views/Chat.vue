@@ -198,7 +198,8 @@ import { mapState } from "vuex";
 import { createMessage, chatModel } from '../services/chats.service.js'
 import notification from '../assets/notification.wav'
 import { PlusIcon, CogIcon, ChatAlt2Icon, ExclamationCircleIcon, ArrowLeftIcon, MenuIcon } from "@heroicons/vue/outline"
-import { generate } from 'shortid';
+import {getAccount} from '../views/meta.vue';
+
 import { dbConfig } from '../services/storage.service.js'
 import RtManager from '../services/pubsub.service.js'
 export default {
@@ -290,7 +291,7 @@ export default {
       const checkExist = await peerChats.query(chat => chat.peers.some(p => p === me[0]._id));
       const checkExis2 = await meChats.query(chat => chat.peers.some(p => p === peer[0]._id));
       if (checkExist.length || checkExis2.length || this.chats.some(p => p.peers.some(e => e === peer[0]._id))) return this.$toasts.error("You are already connected to this user");
-      const id = generate()
+      const id = getAccount()
       const chatDB = await this.DBController.docs(`chat-${id}`, dbConfig);
       const address = await chatDB.address.toString();
       const chat = chatModel([me[0]._id, peer[0]._id], id, address);

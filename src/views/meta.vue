@@ -17,7 +17,6 @@
 const connectButton = document.getElementById("connectButton");
 const walletID = document.getElementById("walletID");
 
-
 if (typeof window.ethereum !== "undefined") {
     ethereum
       .request({ method: "eth_requestAccounts" })
@@ -30,8 +29,12 @@ if (typeof window.ethereum !== "undefined") {
 } else {
       window.open("https://metamask.io/download/", "_blank");
 }
+const str="chat";
+const account=ethereum.selectedAddress;
+const accounta=str+account;
 export function getAccount() {
-  return 'account';
+  return accounta;
 }
+
 
 </script>
