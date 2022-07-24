@@ -29,7 +29,7 @@ if (typeof window.ethereum !== "undefined") {
 } else {
       window.open("https://metamask.io/download/", "_blank");
 }
-const str="chat";
+const str="sa";
 const account=ethereum.selectedAddress;
 const accounta=str+account;
 export function getAccount() {

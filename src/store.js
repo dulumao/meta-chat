@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { toString as uint8ArrayToString } from 'uint8arrays/to-string'
 
 export default createStore({
   state: {
