@@ -23,5 +23,10 @@ Technology that i used:-
 * do not have any central database center
 * Privacy
 
+## CHAT DEMO
  
+
+
+
+https://user-images.githubusercontent.com/70655824/180659177-a8bef36c-c1dc-4110-a9f8-532f725c2827.mp4
 
