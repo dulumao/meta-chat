@@ -8,7 +8,7 @@ export const routes = [
   {
     name: 'app',
     path: "/app",
-    meta: { title: "Ipfs-Chat", requiresAuth: true },
+    meta: { title: "Meta-Chat", requiresAuth: true },
     component: () => import("./views/Chat.vue"),
   },
   {

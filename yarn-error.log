@@ -14,11 +14,11 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\sambi\Downloads\ipfs-chat-test\node_modules\esbuild-windows-64\esbuild.exe'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\sambi\Downloads\Meta-Chat-test\node_modules\esbuild-windows-64\esbuild.exe'
 
 npm manifest: 
   {
-    "name": "ipfs-chat",
+    "name": "Meta-Chat",
     "version": "1.0.0",
     "scripts": {
       "dev": "vite --host",

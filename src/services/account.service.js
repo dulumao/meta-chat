@@ -4,7 +4,7 @@ export const createUser = async (user) => {
   const username = await getRandomUsername();
   return {
     username,
-    avatar: `https://avatars.dicebear.com/api/avataaars/${username}.svg`,
+    avatar: `https://avatars.dicebear.com/api/open-peeps/${username}.svg`,
     id: getAccount(),
   };
 };

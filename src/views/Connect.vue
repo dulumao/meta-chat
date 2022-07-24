@@ -14,9 +14,7 @@
       <div class="py-10 flex flex-col text-center justify-center items-center">
         <h1 class="text-6xl font-bold text-indigo-600">Connect your account</h1>
         <p class="mt-5 text-sm max-w-lg text-gray-500">
-          Your Ipfs-Chat account is unique and once your key is generated you
-          should not let it go. Please undertand that your key is the only way
-          to access to your messages and we can't recover it in any way.
+          We are using your metamask public key means your eth address as the id. sothat it secure the privacy no one can access you chat.
         </p>
       </div>
       <div class="relative">
@@ -24,8 +22,8 @@
           <loader/>
         </div>
         <div class="grid grid-cols-4">
-          <button @click="isGen = true; getAccount()" :class="[isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tl-lg col-span-2 px-10 py-2 border-dashed">Generate</button>
-          <button @click="isGen = false; clear()" :class="[!isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tr-lg col-span-2 px-10 py-2 border-dashed">Import</button>
+          <button @click="isGen = true; getAccount()" :class="[isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tl-lg col-span-2 px-10 py-2 border-dashed">Register</button>
+          <button @click="isGen = false; clear()" :class="[!isGen ? 'border-indigo-600 text-indigo-600 border-b-gray-700' : 'text-white border-gray-700 border-b-indigo-600']" class="hover:border-indigo-600 hover:text-indigo-600 border rounded-tr-lg col-span-2 px-10 py-2 border-dashed">Login</button>
         </div>
         <div v-show="isGen" class="border grid grid-cols-3 border-indigo-600 border-t-transparent border-dashed rounded-bl-lg rounded-br-lg">
           <div class="col-span-3 pt-10 pb-2 flex items-center justify-center">
@@ -54,7 +52,7 @@
           </div>
           <div class="text-white flex flex-col text-sm col-start-2 uppercase justify-start px-2 py-5">
             <h1>ID</h1>
-            <input v-model="userForm.id" class="text-gray-500 text-center bg-transparent border-transparent outline-none" placeholder="type your id" type="text">
+            <input disabled v-model="userForm.id" class="text-gray-500 text-center bg-transparent border-transparent outline-none" placeholder="type your id" type="text">
           </div>
         </div>
       </div>
